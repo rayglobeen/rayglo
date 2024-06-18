@@ -191,6 +191,50 @@
             background-color: #ffbf73; /* Lighter orange on hover */
             transform: scale(1.05);
         }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header .logo {
+                margin-bottom: 10px;
+            }
+            header nav ul {
+                margin-top: 10px;
+                justify-content: center;
+            }
+            header nav ul li {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+            .landing h1 {
+                font-size: 2.5em;
+            }
+            .landing p {
+                font-size: 1em;
+            }
+            .landing .cta {
+                padding: 8px 16px;
+                font-size: 1em;
+            }
+            .section {
+                padding: 30px 10px;
+            }
+            .section h2 {
+                font-size: 2em;
+            }
+            .service-card {
+                width: calc(50% - 20px);
+            }
+            .portfolio-item {
+                width: calc(50% - 20px);
+            }
+            .contact-form input, .contact-form textarea, .contact-form button {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -199,65 +243,65 @@
         <nav>
             <ul>
                 <li><a href="#landing">Home</a></li>
-                <li><a href="#services">Contents</a></li>
-                <li><a href="#portfolio">Premium +</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="landing" class="landing">
-        <h1>Welcome to SohailNangapunga.com</h1>
-        <p>Providing all types of custom made ghapaghap videos</p>
+        <h1>Welcome to Sohail Alam - Futuristic Portfolio</h1>
+        <p>Exploring creativity with futuristic designs.</p>
         <button class="cta">Learn More</button>
     </section>
     
     <section id="services" class="section services">
-        <h2>Our Free Content</h2>
+        <h2>Services</h2>
         <div class="service-cards">
             <div class="service-card">
-                <h3>Special Milfs</h3>
-                <p>30+ Hot milfs , all G+ Cups.</p>
+                <h3>Web Design</h3>
+                <p>Modern and responsive web design solutions.</p>
             </div>
             <div class="service-card">
-                <h3>No Country Barrier</h3>
-                <p>From Indian to Russian , African to Chinese , a large library of videos available.</p>
+                <h3>Graphic Design</h3>
+                <p>Creative graphic design for digital and print media.</p>
             </div>
             <div class="service-card">
-                <h3>Exclusive Gay Videos</h3>
-                <p>Akhil and Asutosh are the starring actors for gay videos.</p>
+                <h3>Branding</h3>
+                <p>Building unique brands that stand out in the market.</p>
             </div>
         </div>
     </section>
     
     <section id="portfolio" class="section portfolio">
-        <h2>Our Premium Content</h2>
+        <h2>Portfolio</h2>
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <h3>Project A</h3>
-                <p>Nishchay Banging 50+ milfs.</p>
+                <p>Website redesign for XYZ Corp.</p>
             </div>
             <div class="portfolio-item">
                 <h3>Project B</h3>
-                <p>Nishchay destroying KV poosies.</p>
+                <p>Brand identity creation for ABC Startup.</p>
             </div>
             <div class="portfolio-item">
                 <h3>Project C</h3>
-                <p>Nishchay in threesome with Asutosh and Akhil.</p>
+                <p>Graphic design campaign for XYZ Event.</p>
             </div>
         </div>
     </section>
     
-    <section id="contact" class="section">
-        <h2>Contact Us For Premium Membership</h2>
+    <section id="contact" class="section contact">
+        <h2>Contact</h2>
         <form class="contact-form">
-            <label for="name">Name</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
-            <label for="email">Email</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             
-            <label for="message">Message</label>
+            <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
             
             <button type="submit">Send Message</button>
@@ -265,9 +309,10 @@
     </section>
     
     <footer>
-        <p>&copy; 2024 Sohail Alam. All rights reserved.</p>
+        <p>&copy; 2024 Sohail Alam. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
+
 
 
