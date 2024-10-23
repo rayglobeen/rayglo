@@ -3,316 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sohail Alam - Futuristic Portfolio</title>
-    <style>
+    <title>NavBar</title>
+    <style>/* Ye root use hota hai universal chiizo ko set karne ke liye , neeche css variables set kiye hue hain colours ke liye */
+        :root{
+            --primarytheme: rgb(0, 255, 204);
+            --hovertheme: rgb(0, 163, 163);
+            --navbgcolor:rgb(34, 34, 34);
+            --pagebgcolor:rgb(21, 21, 21);
+            --fontfamily:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #000; /* Black background */
-            color: #fff; /* White text color */
+            font-family: var(--fontfamily);
+            background-color: var(--pagebgcolor);
         }
         
-        header {
+        .navbar{
+            background-color: var(--navbgcolor);
+            border-bottom: 2px solid var(--primarytheme);
+            box-shadow: 0 5px 8px rgb(0, 0, 0, 0.4);
+            padding: 15px 0;
+            position: relative;
+        }
+        
+        .navbar-container{
+            width: 90%;
+            max-width: 1200px;
             display: flex;
-            justify-content: space-between;
+            margin : 0 auto;
             align-items: center;
-            padding: 20px;
-            background-color: #1a1a1a; /* Dark header background */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            justify-content: space-between;
         }
         
-        header .logo {
-            font-size: 1.5em;
+        .brand-name a{
+            text-decoration: none ;
+            text-transform: uppercase;
             font-weight: bold;
-            color: #ff9900; /* Orange logo color */
+            font-size: 2em;
+            color: var(--primarytheme);
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
         }
         
-        header nav ul {
-            list-style: none;
+        .brand-name a:hover{
+            color: var(--hovertheme);
+        }
+        
+        .items-list {
             display: flex;
-            margin: 0;
-            padding: 0;
+            align-items: center;
+            list-style: none;
+            justify-content: space-around;
         }
         
-        header nav ul li {
-            margin-left: 20px;
+        .items-list li{
+            margin-left: 30px;
         }
         
-        header nav ul li a {
-            color: #fff;
+        .items-list a{
             text-decoration: none;
             font-size: 1.2em;
-            transition: color 0.3s;
+            padding: 8px 16px;
+            color: rgb(238, 248, 247);
+            border: 2px solid transparent;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        
         }
         
-        header nav ul li a:hover {
-            color: #ff9900; /* Orange hover color */
-        }
-        
-        .landing {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(45deg, #1a1a1a, #333); /* Dark gradient */
-            text-align: center;
-            color: #fff; /* White text color */
-        }
-        
-        .landing h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        
-        .landing p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-        }
-        
-        .landing .cta {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            color: #000; /* Black button text color */
-            background-color: #ff9900; /* Orange button background */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        
-        .landing .cta:hover {
-            background-color: #ffbf73; /* Lighter orange on hover */
-            transform: scale(1.05);
-        }
-        
-        .section {
-            padding: 50px 20px;
-            text-align: center;
-            color: #fff; /* White text color */
-        }
-        
-        .section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        
-        .services {
-            background-color: #1a1a1a; /* Dark section background */
-        }
-        
-        .services .service-cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .service-card {
-            background-color: #333;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-        }
-        
-        .portfolio {
-            background-color: #000; /* Black section background */
-        }
-        
-        .portfolio-grid {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .portfolio-item {
-            background-color: #1a1a1a; /* Dark portfolio item background */
-            padding: 20px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .portfolio-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-        }
-        
-        footer {
-            padding: 20px;
-            background-color: #1a1a1a; /* Dark footer background */
-            text-align: center;
-            color: #fff; /* White text color */
-        }
-        
-        footer p {
-            margin: 0;
-        }
-        
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-        
-        .contact-form label {
-            margin-top: 10px;
-            font-size: 1.2em;
-        }
-        
-        .contact-form input, .contact-form textarea, .contact-form button {
-            width: 100%;
-            max-width: 500px;
-            padding: 10px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-        
-        .contact-form button {
-            background-color: #ff9900; /* Orange button background */
-            color: #000; /* Black button text color */
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        
-        .contact-form button:hover {
-            background-color: #ffbf73; /* Lighter orange on hover */
-            transform: scale(1.05);
-        }
-
-        /* Media queries for responsive design */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            header .logo {
-                margin-bottom: 10px;
-            }
-            header nav ul {
-                margin-top: 10px;
-                justify-content: center;
-            }
-            header nav ul li {
-                margin-left: 0;
-                margin-right: 15px;
-            }
-            .landing h1 {
-                font-size: 2.5em;
-            }
-            .landing p {
-                font-size: 1em;
-            }
-            .landing .cta {
-                padding: 8px 16px;
-                font-size: 1em;
-            }
-            .section {
-                padding: 30px 10px;
-            }
-            .section h2 {
-                font-size: 2em;
-            }
-            .service-card {
-                width: calc(50% - 20px);
-            }
-            .portfolio-item {
-                width: calc(50% - 20px);
-            }
-            .contact-form input, .contact-form textarea, .contact-form button {
-                max-width: 100%;
-            }
-        }
-    </style>
+        .items-list a:hover{
+            background-color: var(--primarytheme);
+            color: rgba(0, 6, 60, 0.978);
+            border-color: var(--primarytheme);
+        }</style>
 </head>
 <body>
-    <header>
-        <div class="logo">Sohail Alam</div>
-        <nav>
-            <ul>
-                <li><a href="#landing">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="landing" class="landing">
-        <h1>Welcome to Sohail Alam - Futuristic Portfolio</h1>
-        <p>Exploring creativity with futuristic designs.</p>
-        <button class="cta">Learn More</button>
-    </section>
-    
-    <section id="services" class="section services">
-        <h2>Services</h2>
-        <div class="service-cards">
-            <div class="service-card">
-                <h3>Web Design</h3>
-                <p>Modern and responsive web design solutions.</p>
-            </div>
-            <div class="service-card">
-                <h3>Graphic Design</h3>
-                <p>Creative graphic design for digital and print media.</p>
-            </div>
-            <div class="service-card">
-                <h3>Branding</h3>
-                <p>Building unique brands that stand out in the market.</p>
-            </div>
+    <div class="navbar">
+        <div class="navbar-container">
+             <div class="brand-name">
+                <a href="#">Globeen</a>
+             </div>
+             <div class="list-container">
+                <ul class="items-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+             </div>
+
         </div>
-    </section>
+
+    </div>
     
-    <section id="portfolio" class="section portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <h3>Project A</h3>
-                <p>Website redesign for XYZ Corp.</p>
-            </div>
-            <div class="portfolio-item">
-                <h3>Project B</h3>
-                <p>Brand identity creation for ABC Startup.</p>
-            </div>
-            <div class="portfolio-item">
-                <h3>Project C</h3>
-                <p>Graphic design campaign for XYZ Event.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="section contact">
-        <h2>Contact</h2>
-        <form class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Sohail Alam. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
+
 
 
 
