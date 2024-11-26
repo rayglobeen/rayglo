@@ -7,8 +7,161 @@
     <title>GlobeenRay</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Poppins:wght@400;600;800&display=swap');
+        /* Root Variables for Theme Colors and Fonts */
+:root {
+    --primary-color: rgb(255, 0, 111);
+    --hover-color: rgb(164, 13, 86);
+    --nav-bg: rgb(34, 34, 34);
+    --page-bg: rgb(21, 21, 21);
+    --font-family: "Poppins", sans-serif;
+}
+
+/* Universal Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--page-bg);
+    color: whitesmoke;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--nav-bg);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.brand-name a {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.brand-name a:hover {
+    color: var(--hover-color);
+}
+
+.items-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.items-list a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.items-list a:hover {
+    background-color: var(--primary-color);
+    color: black;
+    border-color: var(--primary-color);
+}
+
+/* Image Slider Section */
+.box1 {
+    margin: 100px auto; /* Center the box horizontally */
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box1 img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color); /* Add border in primary theme */
+    transition: all ease-in-out 0.5s;
+}
+
+.box1 img:hover {
+    width: 25%;
+}
+
+/* Information Section */
+.section2 {
+    padding: 40px;
+    text-align: center;
+}
+
+.info-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Styles */
+.footer-section {
+    background-color: var(--nav-bg);
+    border-top: 2px solid var(--primary-color);
+    text-align: center;
+    padding: 15px 0;
+    color: whitesmoke;
+    font-size: 1em;
+}
+
+.footer-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--hover-color);
+}
+
+/* Floating Icon */
+.floating-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.floating-icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.floating-icon img:hover {
+    transform: scale(1.2);
+}
+
     </style>
-    <link rel="stylesheet" href="style.css">
+<!--     <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
