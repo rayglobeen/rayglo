@@ -1,109 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavBar</title>
-    <style>/* Ye root use hota hai universal chiizo ko set karne ke liye , neeche css variables set kiye hue hain colours ke liye */
-        :root{
-            --primarytheme: rgb(0, 255, 204);
-            --hovertheme: rgb(0, 163, 163);
-            --navbgcolor:rgb(34, 34, 34);
-            --pagebgcolor:rgb(21, 21, 21);
-            --fontfamily:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        
-        body {
-            font-family: var(--fontfamily);
-            background-color: var(--pagebgcolor);
-        }
-        
-        .navbar{
-            background-color: var(--navbgcolor);
-            border-bottom: 2px solid var(--primarytheme);
-            box-shadow: 0 5px 8px rgb(0, 0, 0, 0.4);
-            padding: 15px 0;
-            position: relative;
-        }
-        
-        .navbar-container{
-            width: 90%;
-            max-width: 1200px;
-            display: flex;
-            margin : 0 auto;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .brand-name a{
-            text-decoration: none ;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 2em;
-            color: var(--primarytheme);
-            letter-spacing: 2px;
-            transition: color 0.3s ease;
-        }
-        
-        .brand-name a:hover{
-            color: var(--hovertheme);
-        }
-        
-        .items-list {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            justify-content: space-around;
-        }
-        
-        .items-list li{
-            margin-left: 30px;
-        }
-        
-        .items-list a{
-            text-decoration: none;
-            font-size: 1.2em;
-            padding: 8px 16px;
-            color: rgb(238, 248, 247);
-            border: 2px solid transparent;
-            border-radius: 30px;
-            transition: background-color 0.3s ease;
-        
-        }
-        
-        .items-list a:hover{
-            background-color: var(--primarytheme);
-            color: rgba(0, 6, 60, 0.978);
-            border-color: var(--primarytheme);
-        }</style>
+    <title>GlobeenRay</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Poppins:wght@400;600;800&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="navbar">
-        <div class="navbar-container">
-             <div class="brand-name">
+    <header class="navbar">
+        <nav class="navbar-container">
+            <div class="brand-name">
                 <a href="#">Globeen</a>
-             </div>
-             <div class="list-container">
+            </div>
+            <div class="list-container">
                 <ul class="items-list">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Now Showing</a></li>
+                    <li><a href="#">Upcoming</a></li>
+                    <li><a href="#">Genres</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-             </div>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <section class="section1">
+            <div class="box1">
+                <!-- Movie Posters -->
+                <img src="https://i.pinimg.com/736x/88/c6/36/88c636c3bd9455721ac53d47687b799a.jpg" alt="Movie 2">
+                <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/60s-classic-horror-poster-maria-sanchez.jpg" alt="Movie 1">
+                <img src="https://i.pinimg.com/originals/6c/f9/6d/6cf96ddd92d14bbe3beaa472af5ea82d.jpg" alt="Movie 3">
+                <img src="https://th.bing.com/th/id/R.13610f95e532de0fdcfd99b9f5b1e515?rik=mebFV2WjM5%2bctQ&riu=http%3a%2f%2fgraphicdesignjunction.com%2fwp-content%2fuploads%2f2012%2f05%2flarge%2fmovie-poster-10.jpg&ehk=aYeSXYbT6GHE%2bKFBajnz%2bY2tQJSHZDv5LOy3SQt8WuY%3d&risl=&pid=ImgRaw&r=0" alt="Movie 4">
+                <img src="https://i.pinimg.com/originals/b3/87/9a/b3879a322f8317b4a48d90ebc5e8988a.jpg" alt="Movie 5">
+                <img src="https://1.bp.blogspot.com/-IJp_GHd0zCk/Wlx_JP8oaLI/AAAAAAAAFlQ/UPt12PSczEMODqANbTq4uOWDzMDQN5IAQCLcBGAs/s1600/coba.jpg" alt="Movie 6">
+                <img src="https://1.bp.blogspot.com/-CXfA4CMKYfY/VpJRHqALrWI/AAAAAAAAJ-Q/4UhOoGlyfLk/s1600/Taken%2B3%2BPoster.jpg" alt="Movie 7">
+                <img src="https://i.pinimg.com/originals/18/d7/4e/18d74ef46e722828f75cca91b009f4a5.jpg" alt="Movie 8">
+                <img src="https://images.sr.roku.com/idType/roku/context/global/id/ebaf4179f6565b74868e79f9f2875393/images/gracenote/assets/p23964441_v_v12_ad.jpg/magic/396x0/filters:quality(70)" alt="Movie 9">
+                <img src="https://wallpapercave.com/wp/wp1945933.jpg" alt="Movie 10">
+            </div>
+        </section>
+
+        <section class="section2">
+            <div class="info-box">
+                <p>Welcome! This is a basic movie streaming website (not responsive yet) created as a practice project. The goal of this site is to improve my web development skills, including HTML, CSS, and basic design principles. While it may not be fully functional or feature rich, it serves as a medium for me in learning how to build and style websites. Feel free to explore the layout and design!</p>
+            
+            </div>
+        </section>
+
+        <div class="floating-icon">
+            <img src="fubuki.png" alt="Logo">
         </div>
+    </main>
 
-    </div>
-    
+    <footer class="footer-section">
+        <p>&copy; 2024 Globeen. All Rights Reserved.</p>
+        <p>Email: <a href="#">globeenray@gmail.com</a></p>
+    </footer>
 </body>
+
 </html>
+
 
 
 
